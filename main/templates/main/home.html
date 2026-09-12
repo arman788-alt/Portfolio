@@ -1,0 +1,611 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Md. Arman Ullah | Backend Web Developer
+{% endblock %}
+
+{% block content %}
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+
+        <!-- Logo -->
+        <a href="/" class="text-2xl font-bold tracking-tight text-white">
+            ARMAN<span class="text-cyan-400">.</span>DEV<i class="bx bxl-python text-blue-500"></i>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden items-center gap-8 md:flex">
+
+            <a href="#home"
+               class="text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Home
+            </a>
+
+            <a href="#about"
+               class="text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                About
+            </a>
+
+            <a href="#skills"
+               class="text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Skills
+            </a>
+
+            <a href="#projects"
+               class="text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Projects
+            </a>
+
+            
+            <a href="#education"
+               class="text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Education
+            </a>
+
+            <a href="#contact"
+               class="text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- Desktop CV Button -->
+        <a href="{% static 'main/ARMAN_Django Developer.pdf' %}"
+           class="hidden rounded-full border border-cyan-400/40 bg-cyan-400/10 px-5 py-2.5 text-sm font-semibold text-cyan-300 transition hover:border-cyan-300 hover:bg-cyan-400 hover:text-slate-950 md:inline-flex">
+            Download CV
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+            id="menu-btn"
+            type="button"
+            class="inline-flex items-center justify-center rounded-lg border border-white/10 p-2 text-slate-300 transition hover:border-cyan-400 hover:text-cyan-400 md:hidden"
+            aria-label="Open menu"
+        >
+
+            <svg
+                id="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.8"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                />
+            </svg>
+
+        </button>
+        
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+        id="mobile-menu"
+        class="hidden border-t border-white/10 bg-slate-950 px-6 py-6 md:hidden"
+    >
+
+        <div class="flex flex-col gap-5">
+
+            <a href="#home"
+               class="mobile-link text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Home
+            </a>
+
+            <a href="#about"
+               class="mobile-link text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                About
+            </a>
+
+            <a href="#skills"
+               class="mobile-link text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Skills
+            </a>
+
+            <a href="#projects"
+               class="mobile-link text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Projects
+            </a>
+
+            
+            <a href="#education"
+               class="mobile-link text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Education
+            </a>
+
+
+            <a href="#contact"
+               class="mobile-link text-sm font-medium text-slate-300 transition hover:text-cyan-400">
+                Contact
+            </a>
+
+            <a href="#contact"
+               class="mt-2 inline-flex w-fit rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-semibold text-slate-950">
+                Download CV
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section
+    id="home"
+    class="relative min-h-screen overflow-hidden bg-slate-950"
+>
+
+    <!-- Background Glow -->
+    <div
+        class="pointer-events-none absolute left-1/2 top-1/4 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl"
+    ></div>
+
+
+    <!-- Hero Grid -->
+    <div
+        class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-16 px-6 py-20 lg:grid-cols-2 lg:px-8"
+    >
+
+
+        <!-- ================= PROFILE IMAGE ================= -->
+        <div
+            class="order-1 flex justify-center lg:order-2 lg:justify-end"
+        >
+
+            <!-- Outer Glow -->
+            <div
+                class="absolute h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl sm:h-96 sm:w-96"
+            ></div>
+
+
+            <!-- Image + Cards -->
+            <div class="relative">
+
+                <!-- Profile Image -->
+                <div
+                    class="relative h-72 w-72 overflow-hidden rounded-full border border-white/10 bg-slate-900 shadow-2xl shadow-cyan-500/10 sm:h-96 sm:w-96"
+                >
+
+                    <img
+                        src="{% static 'main/images/Arman.png' %}"
+                        alt="Md Arman Ullah"
+                        class="h-full w-full object-cover"
+                    >
+
+                </div>
+
+
+                <!-- Floating Tech Card -->
+                <div
+                    class="absolute -bottom-5 -left-5 rounded-2xl border border-white/10 bg-slate-900/90 px-5 py-4 shadow-xl backdrop-blur-xl"
+                >
+
+                    <!-- <p class="text-xs text-slate-500">
+                        Specialized in
+                    </p> -->
+
+                    <p class="mt-1 text-sm font-semibold text-white">
+                        Python & Django
+                    </p>
+
+                </div>
+
+
+                <!-- Experience Card -->
+                <div
+                    class="absolute -right-5 top-10 rounded-2xl border border-white/10 bg-slate-900/90 px-5 py-4 shadow-xl backdrop-blur-xl"
+                >
+
+                    <p class="text-2xl font-bold text-cyan-400">
+                        06+
+                    </p>
+
+                    <p class="text-xs text-slate-400">
+                        Projects
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= HERO CONTENT ================= -->
+        <div
+            class="order-2 text-center lg:order-1 lg:text-left"
+        >
+
+            <!-- Small Badge -->
+            <div
+                class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2"
+            >
+
+                <span
+                    class="h-2 w-2 animate-pulse rounded-full bg-cyan-400"
+                ></span>
+
+                <span class="text-sm font-medium text-cyan-300">
+                    Available for opportunities
+                </span>
+
+            </div>
+
+
+            <!-- Intro -->
+            <p
+                class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-slate-400"
+            >
+                Hello, I'm
+            </p>
+
+
+            <!-- Name -->
+            <h1
+                class="text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
+            >
+
+                Md. Arman
+
+                <span class="block text-cyan-400">
+                    Ullah
+                </span>
+
+            </h1>
+
+
+            <!-- Role -->
+            <h2
+                class="mt-6 text-xl font-medium text-slate-300 sm:text-2xl"
+            >
+                Backend Web Developer
+            </h2>
+
+
+            <!-- Description -->
+            <p
+                class="mx-auto mt-6 max-w-xl text-base leading-8 text-slate-400 lg:mx-0"
+            >
+
+                I build modern, scalable and user-focused web applications
+                using Python, Django, JavaScript and modern web technologies.
+
+            </p>
+
+
+            <!-- Buttons -->
+            <div
+                class="mt-9 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start"
+            >
+
+                <a
+                    href="#projects"
+                    class="rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-bold text-slate-950 transition duration-300 hover:-translate-y-1 hover:bg-cyan-300"
+                >
+                    View My Work
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-400"
+                >
+                    Let's Talk
+                </a>
+
+            </div>
+
+
+            <!-- Social Links -->
+            <div
+                class="mt-10 flex items-center justify-center gap-5 lg:justify-start"
+            >
+
+                <a
+                    href="https://github.com/arman788-alt"
+                    class="text-sm font-medium text-slate-400 transition hover:text-cyan-400"
+                >
+                    GitHub
+                </a>
+
+                <span class="text-slate-700">/</span>
+
+                <a
+                    href="https://www.linkedin.com/in/mohammad-arman-5792aa282/"
+                    class="text-sm font-medium text-slate-400 transition hover:text-cyan-400"
+                >
+                    LinkedIn
+                </a>
+
+                <span class="text-slate-700">/</span>
+
+                <a
+                href="mailto:mdarmanullah777@gmail.com"
+                class="text-sm font-medium text-slate-400 transition hover:text-cyan-400"
+            >
+                Email
+            </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Scroll Indicator -->
+    <div
+        class="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
+    >
+
+        <span
+            class="text-[10px] uppercase tracking-[0.3em] text-slate-600"
+        >
+            Scroll
+        </span>
+
+        <div
+            class="h-8 w-px bg-gradient-to-b from-cyan-400 to-transparent"
+        ></div>
+
+    </div>
+
+</section>
+
+<!-- Temporary Sections -->
+
+    <!-- ================= ABOUT ================= -->
+<section id="about" class="relative overflow-hidden bg-slate-900 py-24 sm:py-28">
+
+    <!-- Background Glow -->
+    <div class="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-cyan-500/5 blur-3xl"></div>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="mb-16 text-center">
+
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+                About Me
+            </p>
+
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                A little bit about me
+            </h2>
+
+            <div class="mx-auto mt-5 h-1 w-16 rounded-full bg-cyan-400"></div>
+
+        </div>
+
+
+        <!-- About Content -->
+        <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+            <!-- Left Content -->
+            <div>
+
+                <p class="text-lg leading-8 text-slate-300">
+                    I'm a Computer Science & Engineering graduate with a strong
+                    interest in building modern and reliable web applications.
+                    I enjoy turning ideas into clean, functional and
+                    user-friendly digital experiences.
+                </p>
+
+                <p class="mt-6 leading-8 text-slate-400">
+                    My main focus is backend web development.
+                    I work with Python and Django to build secure backend
+                    systems, REST APIs and database-driven applications,
+                    while also using modern frontend technologies to create
+                    responsive interfaces.
+                </p>
+
+                <p class="mt-6 leading-8 text-slate-400">
+                    I'm continuously learning new technologies and improving
+                    my development skills by building real-world projects.
+                </p>
+
+
+                <!-- Tech Highlights -->
+                <div class="mt-8 flex flex-wrap gap-3">
+
+                    <span class="rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-sm font-medium text-cyan-300">
+                        Python
+                    </span>
+
+                    <span class="rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-sm font-medium text-cyan-300">
+                        Django
+                    </span>
+
+                    <span class="rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-sm font-medium text-cyan-300">
+                        JavaScript
+                    </span>
+
+                    {% comment %} <span class="rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-sm font-medium text-cyan-300">
+                        React
+                    </span> {% endcomment %}
+
+                    {% comment %} <span class="rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-sm font-medium text-cyan-300">
+                        Node.js
+                    </span>
+                    {% endcomment %}
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Stats -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-6">
+
+                <!-- Card 1 -->
+                <div class="group rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+
+                    <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 text-cyan-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M16 18l2-2-2-2m-4 4l-2-2 2-2m-4 4l-2-2 2-2M7 5h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2z"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <p class="text-3xl font-bold text-white">
+                        Python
+                    </p>
+
+                    <p class="mt-2 text-sm text-slate-500">
+                        Primary Language
+                    </p>
+
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="group rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+
+                    <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 text-cyan-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v12m-6-6h12"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <p class="text-3xl font-bold text-white">
+                        Django
+                    </p>
+
+                    <p class="mt-2 text-sm text-slate-500">
+                        Backend Framework
+                    </p>
+
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="group rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+
+                    <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 text-cyan-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M8 9l3 3-3 3m5 0h3M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <p class="text-3xl font-bold text-white">
+                        Backend
+                    </p>
+
+                    <p class="mt-2 text-sm text-slate-500">
+                        Development
+                    </p>
+
+                </div>
+
+
+                <!-- Card 4 -->
+                <div class="group rounded-2xl border border-white/10 bg-slate-950/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+
+                    <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 text-cyan-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v12m6-6H6"
+                            />
+                        </svg>
+
+                    </div>
+
+                    <p class="text-3xl font-bold text-white">
+                        CSE
+                    </p>
+
+                    <p class="mt-2 text-sm text-slate-500">
+                        Academic Background
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+ <!-- ================= SKILLS ================= -->
+
+
+{% include "main/skills.html" %}
+
+<!-- project -->
+{% include "main/projects.html" %}
+
+
+<!-- education -->
+  {% include 'main/education.html' %}  
+
+  <!-- ================= CONTACT ================= -->
+{% include 'main/contact.html' %}
+
+{% endblock %}
